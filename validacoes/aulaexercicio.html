@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" placeholder="Didite seu nome" onBlur="onblur('marca')" onFocus="onfocus('nome')">
+    <label for="idade">Idade</label>
+    <input type="number" id="idade">
+    <label for="curso">Curso</label>
+    <input type="text" id="curso" >
+    <button onclick="mensagem()">Enviar</button>
+
+    <script>
+        function onfocus(texto){
+            alert("Focado em: " + texto);
+        }
+        function onblur(texto){
+            alert("Pedindo foco em: "+texto)
+        }
+
+        function mensagem(){
+            let nome= document.getElementById("nome").value;
+            let idade= document.getElementById("idade").value;
+            let curso= document.getElementById("curso").value;
+
+            alert("O "+nome+" tem "+idade+" e esta no curso de "+ curso)
+        }
+
+    </script>
+</body>
+</html>
